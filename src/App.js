@@ -20,7 +20,7 @@ function App() {
   }
 
   async function handleRemoveRepository(id) {
-    const response = await api.delete(`repositories/${id}`)
+    await api.delete(`repositories/${id}`)
 
     const deletedIndex = repositories.findIndex(repository => id === repository.id)
 
